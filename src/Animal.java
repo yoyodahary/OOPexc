@@ -16,6 +16,18 @@ public abstract class Animal implements Seasonable,Comparable{
     }
 
     @Override
+    public void changeSeason() {
+        if(season == Season.WINTER){
+            season = Season.SPRING;
+        }else if(season == Season.SPRING){
+            season = Season.SUMMER;
+        }else if(season == Season.SUMMER){
+            season = Season.FALL;
+        }else if(season == Season.FALL){
+            season = Season.WINTER;
+        }
+    }
+    @Override
     public int compareTo(Object o) {
         // TODO: Implement.
         return 0;
