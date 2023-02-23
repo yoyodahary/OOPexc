@@ -7,7 +7,11 @@ public class Bear extends Animal {
     }
     @Override
     public String toString() {
-        return "Bear. " + super.toString();
+        String desc = "Bear. ";
+        if (this.isAsleep) {
+            desc += "I am sleeping. ";
+        }
+        return desc + super.toString();
 
     }
     @Override

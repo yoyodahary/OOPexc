@@ -36,7 +36,7 @@ public abstract class Tree implements Comparable, Seasonable {
     @Override
     public String toString() {
         String desc = "";
-        desc += "My height is: " + this.height;
+        desc += " My height is: " + this.height;
         if (leavesColor != null) {
             desc += " and my color is: " + this.leavesColor;
         } else {

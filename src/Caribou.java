@@ -1,21 +1,16 @@
 public class Caribou extends Animal {
-    private String location;
 
     Caribou(int weight, Season season) {
         // TODO: Implement.
         super(weight, season, null);
         if (super.getSeason() == Season.WINTER) {
             this.color = Color.WHITE;
-            this.location = "South";
         } else if (super.getSeason() == Season.SPRING) {
             this.color = Color.BROWN;
-            this.location = "South";
         } else if (super.getSeason() == Season.SUMMER) {
             this.color = Color.BROWN;
-            this.location = "North";
         } else if (super.getSeason() == Season.FALL) {
             this.color = Color.BROWN;
-            this.location = "North";
         }
     }
 
@@ -26,7 +21,14 @@ public class Caribou extends Animal {
      */
     @Override
     public String toString() {
-        return "Caribou: " + super.toString();
+        String desc = "Caribou: ";
+        if (super.getSeason() == Season.WINTER) {
+            desc += "I am migrating south. ";
+        } else if (super.getSeason() == Season.SUMMER) {
+            desc += "I am migrating north. ";
+        }
+
+        return desc + super.toString();
 
     }
 
@@ -39,12 +41,11 @@ public class Caribou extends Animal {
         super.changeSeason();
         if (super.getSeason() == Season.WINTER) {
             this.color = Color.WHITE;
-            this.location = "South";
         } else if (super.getSeason() == Season.SPRING) {
             this.color = Color.BROWN;
-        } else if (super.getSeason() == Season.SUMMER) {
-            this.location = "North";
         }
+
+
     }
 
 }

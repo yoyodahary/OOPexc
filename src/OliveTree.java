@@ -9,7 +9,7 @@ public class OliveTree extends Tree {
     public String toString() {
         String desc = "Olive tree.";
         if (this.season == Season.FALL) {
-            desc += "I give fruit.";
+            desc += " I give fruit.";
         }
         desc += super.toString();
         return desc;
